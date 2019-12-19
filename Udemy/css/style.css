@@ -1,1 +1,156 @@
+/*reset wsystkich 
+marginesów zewnetrznych(margin)
+wewnętrznych(padding)
+czcinka głown Calistoga jeśli brak to użyj arial
+pozwoli ustalić ctałą szerokość naszej strony bez względu na póżniejsze zminay np marginesów obramowań itp*/
+*{
+    margin: 0px;/*0 góra 0 prawa 0 dół 0 lewa*/
+    padding: 0px;/*0 góra 0 prawa 0 dół 0 lewa*/
+    /*font-family: Calistoga, arial;*/
+    box-sizing: border-box;
+}
+header img{
+    /*z-index: -1;*/
+    background-image: url(P1060567a.JPG);
+    border: 3px green solid;
+    width: 100%;
+    display: block;
+}
+header h1{
+    text-align: center;
+    position: relative;
+    top: 333px;
+}
+body{
+    margin: 17px;
+    padding: 27px;
+    background-color: aqua;
+    background-image: url(logo.jpg);
+    background-repeat: no-repeat;/* wyswietli tylko raz, bez powtórzeń*/
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    border: 2px red solid;
+}
+#bloki{
+    text-align: justify;/*wyjustowanie pszystkich akapitów w identyfikatorze bloki*/
+}
+.one{
+/*
+    font-variant: small-caps;
+    font-size: 120px; lub w jednej linii*/
+    background-color: burlywood;
+    margin: 10px;
+    padding: 14px;
+    border-top-style: groove;
+    font: 20px italic small-caps bolder;
+    float: right;/*opływanie element będzie przy prawym brzegu strony */
+    
+}
+.two{
+    background-color: blueviolet;
+    width: 400px;
+    margin: 10px;
+    padding: 24px;
+    border: 21px inset;/*góra i lewy bokciemniejsze niż prawo i dół, outset odwrotnie*/
+    float: right;
+}
+.three{
+    background-color: chartreuse;
+    border-width: thick;
+    border-style: solid dotted groove none;
+    border-color: #00FF00;
+    margin: 10px;
+    padding: 24px;
+}
+.four{
+    background-color:darkgoldenrod;
+    clear: both;/*czyści opływanie zarówno z lewej jak i z prawej strony*/
+    border: groove red 8px;/*rowek*/
+    cursor: not-allowed;
+    width: 400px;
+    margin: 10px;
+    padding: 24px;
+    float: left;/*element bedzie przy lewym brzegu strony*/
+}
+.five{
+    margin: 11px;
+    padding: 22px;
+    background-color: deeppink;
+}
+.six{
+    margin: 11px;
+    padding: 22px;
+    background-color: darkorchid;
+}
+.seven{
+    margin: 11px;
+    padding: 22px;
+    background-color: firebrick;
+    clear: left;
+}
+span{
+    position: fixed;
+    bottom: 2px;
+}
+/*TABELE*/
+legend, dt{
+    font-weight: bold;
+}
 
+caption{
+    background-color: burlywood;
+}
+thead{
+    background-color: gray;
+}
+tbody{
+    background-color: greenyellow;
+}
+tfoot{
+    background-color: silver;
+}
+/*definiowanie linków tylko z menu nawigacyjnego między stronami
+w zależności od ich aktywności*/
+div.nawigacja a:link, div.nawigacja a:visited{
+    text-decoration: none;
+    color: black;
+    background-color: navajowhite;
+}
+div.nawigacja a:hover, div.nawigacja a:active{
+    text-decoration: none;
+    color: red;
+   background-color: yellow;
+}
+/*Edycja list nienumerowanych*/
+ul{
+    list-style-type:lower-greek;
+    list-style-position: outside;
+    list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif")
+}
+/*Edycja list numerowanych*/
+ol{
+    list-style-type: decimal;
+}
+div.dolny{
+    position: relative;
+    width: 555px;
+    height: 555px;
+}
+div.kwadrat{
+    position: absolute;/*Ponieważ klasa kwadrat jest w identyfikatorze bloki którego selekto position posiada wartość relative wartość absolute z klasy kwadrat odnosi się nie do całej strony ale do div id=bloki */
+    left: 0px;
+    width: 100px;
+    height: 100px;
+}
+footer{
+    margin: 42px 10px 21px 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: darkolivegreen;
+    font-size: 22px;
+    /*wyświetla stopkę cały czas na dole strony szerokość paska 100%*/
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+
+}
